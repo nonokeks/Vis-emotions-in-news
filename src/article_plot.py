@@ -20,7 +20,7 @@ from matplotlib.cbook import get_sample_data
 from matplotlib.widgets import Button
 from matplotlib.widgets import SpanSelector
 
-from data_test import read_data_set, sum_data_set, Month, read_file
+from read_data import read_data_set, sum_data_set, Month, read_file
 
 #global variables
 explode = [ 0, 0, 0, 0, 0, 0, 0, 0]
