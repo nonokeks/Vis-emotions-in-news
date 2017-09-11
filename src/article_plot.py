@@ -118,12 +118,12 @@ def make_pct(values, i):
     return '{p:0.2f}% \n({v:d})'.format(p=pct,v=val)
 
 def map_colors(values):
+    global emo_words_all
 
     percentages = []
-    total = sum(values)
 
     for el in values :
-        percentages.append(el/total)
+        percentages.append(el/emo_words_all)
 
     joy = [('#c3bb30'),('#e5db33'),('#f4ec63'),('#FFF999')]
     anticipation = [('#bd6000'),('#ea7f14'),('#ffb060'),('#ffdbb6')]
