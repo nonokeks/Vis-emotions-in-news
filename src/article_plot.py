@@ -161,12 +161,12 @@ def make_flower():
     center = [0,0]
     r1 = 1.5
     r2 = 3
-    angle = (math.pi * 2 / num_shapes)
+    angle = (math.pi * 2 / num_shapes) * -1
     labels = 'Joy', 'Trust', 'Fear', 'Surprise', 'Sadness', 'Disgust', 'Anger', 'Anticipation'
     r_l = 3.9
     for i in range(0, num_shapes):
-        x = math.cos((i-6) * (angle)) 
-        y = math.sin((i-6) * (angle)) 
+        x = math.cos((i-2) * (angle)) 
+        y = math.sin((i-2) * (angle)) 
         label_str = labels[i] + '\n' + make_pct(counter, i)
         plt.text((x*r_l) -0.55, y*r_l-0.5 , label_str)
 
@@ -199,7 +199,7 @@ def generate_path():
     r1 = 2
     r2 = r3 = 3
     num_shapes = 8
-    angle = (math.pi * 2 / num_shapes)
+    angle = (math.pi * 2 / num_shapes) * -1
     c = 0.4
     wide = 0.3
 
@@ -212,14 +212,14 @@ def generate_path():
         if(explode[i] == 0):
             path_data = [
                 (Path.MOVETO, center),
-                (Path.CURVE4, [math.cos(((i-6) * angle)-c) * r1, math.sin(((i-6) * angle)-c) * r1]),
-                #(Path.CURVE4, [math.cos((i-6) * (angle)-c) * r2, math.sin((i-6) * (angle)-c) * r2]),
-                (Path.CURVE4, [math.cos((i-6) * (angle)) * r3, math.sin((i-6) * (angle)) * r3]),
+                (Path.CURVE4, [math.cos(((i-2) * angle)-c) * r1, math.sin(((i-2) * angle)-c) * r1]),
+                #(Path.CURVE4, [math.cos((i-2) * (angle)-c) * r2, math.sin((i-2) * (angle)-c) * r2]),
+                (Path.CURVE4, [math.cos((i-2) * (angle)) * r3, math.sin((i-2) * (angle)) * r3]),
 
-                (Path.MOVETO, [math.cos((i-6) * (angle)) * r3, math.sin((i-6) * (angle)) * r3]),
+                (Path.MOVETO, [math.cos((i-2) * (angle)) * r3, math.sin((i-2) * (angle)) * r3]),
 
-                #(Path.CURVE4, [math.cos(((i-6) * angle)+c) * r2, math.sin(((i-6) * angle)+c) * r2]),
-                (Path.CURVE4, [math.cos(((i-6) * angle)+c) * r1, math.sin(((i-6) * angle)+c) * r1]),
+                #(Path.CURVE4, [math.cos(((i-2) * angle)+c) * r2, math.sin(((i-2) * angle)+c) * r2]),
+                (Path.CURVE4, [math.cos(((i-2) * angle)+c) * r1, math.sin(((i-2) * angle)+c) * r1]),
                 (Path.CURVE4, center),
 
                 (Path.MOVETO, center),
@@ -227,12 +227,12 @@ def generate_path():
                 ]
         else:
             r_explode = 0.3
-            x = math.cos((i-6)*angle)
-            x_c1 = math.cos(((i-6) * angle)-c+0.05)
-            x_c2 = math.cos(((i-6) * angle)+c-0.05)
-            y = math.sin((i-6)*angle)
-            y_c1 = math.sin(((i-6) * angle)-c+0.05)
-            y_c2 = math.sin(((i-6) * angle)+c-0.05)
+            x = math.cos((i-2)*angle)
+            x_c1 = math.cos(((i-2) * angle)-c+0.05)
+            x_c2 = math.cos(((i-2) * angle)+c-0.05)
+            y = math.sin((i-2)*angle)
+            y_c1 = math.sin(((i-2) * angle)-c+0.05)
+            y_c2 = math.sin(((i-2) * angle)+c-0.05)
             center2 = [x * r_explode, y * r_explode]
 
             path_data = [
