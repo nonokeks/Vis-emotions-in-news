@@ -96,8 +96,8 @@ class FlowerEventHandler:
                     self.update()
                     return
 
-            self.update()
-            return
+            #self.update()
+            #return
 
     def onkey(self,event):
         if(event.key == 'q'):
