@@ -178,7 +178,7 @@ def make_flower():
     text_bottom_left = ax.text(-6, 4.4, 'Emotion words: ' + str(emo_words_all) + '\nWords in total:  ' + str(words_total))
     text_bottom_left.set_fontsize(9)
 
-    text1 = plt.text(-3.83, 20.75, 'Visualization of Emotions in News Articles', weight = 'bold', fontsize=20)
+    text1 = plt.text(-2.1, 20.75, 'Visualization of Emotions in News Articles', weight = 'bold', fontsize=20)
     text2 = plt.text(-2.4, 7, 'Click on the flower to deselect/select an\n'
         'emotion from the right plots or select a\n'
         'range in the upper right plot to be shown\n'
